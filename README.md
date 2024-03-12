@@ -5,6 +5,8 @@
 To install symfony run:
 ```bash
 sh .docker/install-symfony.sh 7.0.*
+# sh .docker/install-symfony.sh 6.4.*
+# sh .docker/install-symfony.sh 5.4.*
 ```
 To run symfony server run:
 ```bash
