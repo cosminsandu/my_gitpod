@@ -6,3 +6,7 @@ To install symfony run:
 ```bash
 sh .docker/install-symfony.sh 7.0.*
 ```
+To run symfony server run:
+```bash
+symfony server:start
+```
