@@ -39,3 +39,8 @@ RUN wget https://getcomposer.org/installer -O - | php -- --install-dir=/usr/loca
 
 # Install Symfony CLI and fix permissions
 RUN wget https://get.symfony.com/cli/installer -O - | bash -s -- --install-dir=/usr/local/bin
+
+USER gitpod
+
+# Expose HTTP port
+EXPOSE 80
