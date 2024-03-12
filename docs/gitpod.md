@@ -33,7 +33,14 @@ image:
     file: .gitpod.Dockerfile
 ```
 
-Create `.gitpod.Dockerfile` witht the custome Dockerfile instruction(s).
+Create `.gitpod.Dockerfile` with the custom Dockerfile instruction(s).
+
+It is recommended to extend one of the [Gitpod-provided base images](https://hub.docker.com/u/gitpod/).
+
+But it is possible to configure a Dockerfile with a public (Debian/Ubuntu-based) image as its base. There are some requirements for a public base image to work properly as a workspace. (e.g. you’ll need to set up the `gitpod` user with the right UID, and install `git`)
+
+Additional tools & languages: see https://github.com/gitpod-io/workspace-images/tree/main/chunks for references to configure your workspace image with common tools and languages. For instance, [this Dockerfile](https://github.com/gitpod-io/workspace-images/blob/main/chunks/tool-docker/Dockerfile) shows how to install docker and docker-compose.
+
 
 ## gitpod user
 When you launch a Gitpod workspace, the local console will use the `gitpod` user,
