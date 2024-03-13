@@ -5,6 +5,7 @@
   * [Init a gitpod env](#init-a-gitpod-env)
   * [Docker Images](#docker-images)
   * [Custom Dockerfile](#custom-dockerfile)
+  * [Docker compose](#docker-compose)
   * [gitpod user](#gitpod-user)
 <!-- TOC -->
 
@@ -41,6 +42,18 @@ But it is possible to configure a Dockerfile with a public (Debian/Ubuntu-based)
 
 Additional tools & languages: see https://github.com/gitpod-io/workspace-images/tree/main/chunks for references to configure your workspace image with common tools and languages. For instance, [this Dockerfile](https://github.com/gitpod-io/workspace-images/blob/main/chunks/tool-docker/Dockerfile) shows how to install docker and docker-compose.
 
+## Docker compose
+Create a `docker-compose.yml` file with pre-defined services.
+
+in .gitpod.yml add tasks
+```bash
+tasks:
+  - init: |
+      docker-compose pull
+  - command: |
+      docker-compose up
+```
+Testing example: https://github.com/gitpod-samples/template-docker-compose?tab=readme-ov-file
 
 ## gitpod user
 When you launch a Gitpod workspace, the local console will use the `gitpod` user,
